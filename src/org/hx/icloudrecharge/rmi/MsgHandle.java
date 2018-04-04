@@ -14,7 +14,7 @@ public class MsgHandle {
     }
 
     public static String deleteMsg(String str){
-        String regPwd=",\\s*\\\\{0,1}\\s*\"\\s*(Password|pwd|oldPwd|newPwd|passwd|DKey|OldPassword|NewPassword)\\s*\\\\{0,1}\\s*\"\\s*:\\s*\\S+\\s*\"";
+        String regPwd=",{0,1}\\s*\\\\{0,1}\\s*\"\\s*(Password|pwd|oldPwd|newPwd|passwd|DKey|OldPassword|NewPassword)\\s*\\\\{0,1}\\s*\"\\s*:\\s*\\S+\\s*\"";
         String[] arr = str.split(regPwd);
         String deleteMsg="";
         for(String s : arr)
